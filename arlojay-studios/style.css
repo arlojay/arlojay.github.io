@@ -1,0 +1,5 @@
+@import url(/style.css);
+
+#background {
+    background: linear-gradient(to top, #111, #221811);
+}
