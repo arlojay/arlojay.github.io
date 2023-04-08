@@ -8,11 +8,11 @@ for (let el of images) {
 
     el.parentElement.insertBefore(loadingEl, el);
 
-    el.hidden = true;
+    el.style.display = "none";
     loadingEl.hidden = false;
 
     el.addEventListener("load", e => {
-        el.hidden = false;
+        el.style.display = "";
         loadingEl.hidden = true;
     })
     el.addEventListener("click", e => {
