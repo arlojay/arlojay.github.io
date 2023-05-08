@@ -3,3 +3,10 @@
 #background {
     background: url(/renders/imageedit.png);
 }
+#map-requirement-for-class-assignment {
+    width: 100%;
+}
+#map-requirement-for-class-assignment iframe {
+    width: 100%;
+    height: 24em;
+}
