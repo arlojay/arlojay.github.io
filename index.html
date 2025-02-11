@@ -1,84 +1,76 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Arlojay's Home Page</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="script.js" defer></script>
-    <link rel="preload" href="renders/imageedit.png" as="image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Arlojay</title>
 </head>
-
 <body>
-    <div id="background"></div> <img src="/renders/profile-new-new-tightangle.png" id="icon">
-    <div id="content">
-        <nav> <a href="/">Home</a> &mdash; <a href="/gallery">Gallery</a> &mdash; <a href="/programs">Programs</a>
-            &mdash; <a href="/arlojay-studios">Arlojay Studios</a> </nav>
-        <div id="head">
-            <h1>Hello there! I'm arlojay.</h1>
+    <div id="copied-popup">
+        <div>
+            <span>Copied!</span>
         </div>
-        <div id="body">
-            <p>I generally like to create <a href="/programs/">games/apps</a>, make music on <a
-                    href="https://onlinesequencer.net/members/18739">OnlineSequencer</a> and <a
-                    href="https://arlojay.bandcamp.com">Bandcamp</a>, and make <a href="/gallery/">Blender art.</a> I am
-                a new full-stack developer (<abbr title="MongoDB, Express, Handlebars, NodeJS">MEHN</abbr>) and learning
-                <a href="https://cloud.mongodb.com/">MongoDB</a>. </p>
-            <p></p>
-            <!-- <p>I my last big project was working on a platformer game called OnlinePlatformer. I would link it here, but
-                it's a closed beta and I don't want leaks just in case I open it again in the future. Although, if you
-                want to see my other projects, check out my <a href="https://github.com/arlojay">Github!</a> (Fun fact:
-                it's hosting this site)</p>
-            <p>You can find the first edition of OnlinePlatformer at <a
-                    href="http://platformergame.us">platformergame.us</a> if you want to get a feel for what the game
-                felt like.</p> -->
-            <!-- <p>My newest project is <a href="https://forum.arlojay.com">FurNet,</a> a forum site designed for furries.
-                There's not too much outstanding content or features on the site yet or anything that speaks "furry" in
-                particular, but anyone is free to sign up while its in development.</p> -->
-            <p>If you want to talk to me, send me a friend request on <a
-                    href="https://discord.com/users/584326261258846208">Discord!</a> I may also be on my <a
-                    href="https://arlojay.chat">chat room.</a></p>
-        </div>
-        <div class="separator"></div>
-        <h3>Other programming projects</h3>
-        <div id="github-link">
-            <p>You can find my main GitHub profile at <a href="https://github.com/arlojay">github.com/arlojay</a></p>
-            <p>I also own a GitHub organization, arlojay-studios, which can be found on my <a
-                    href="/arlojay-studios/">website's page</a> or directly on <a
-                    href="https://github.com/arlojay-studios">GitHub.</a></p>
-        </div>
-        <div class="separator"></div>
-        <h3>About My Forums</h3>
-        <div id="arlojay-forums"> <a href="https://forum.arlojay.com">My Forums</a> started as an idea, just by the
-            name: FurNet. I wanted to create a platform where furries could talk to each other. It initally launched as
-            a test app for testing <a href="https://handlebarsjs.com/">Handlebars</a> and creating a versatile account
-            system. Similar to OnlinePlatformer, it became popular among my friends and I kept developing it. I began to
-            flesh out some of the basic forum features found on other sites, such as searching, liking, comments, and
-            admin controls. However, during public testing, I found that pretty much everyone I showed it to didn't want
-            to associated with or reffered to as a furry and changed the name to "Arlojay Forums". By developing this
-            app, I learned how to manage <a href="https://cloud.mongodb.com/">MongoDB</a> databases, <a
-                href="https://aws.amazon.com/">MongoDB</a> s3 buckets, and <a
-                href="https://handlebarsjs.com/">Handlebars</a>. </div>
-        <div class="separator"></div>
-        <h3>About OnlinePlatformer (Abandoned)</h3>
-        <div id="platformer-game"> OnlinePlatformer, originally known as Platformer Game, was a small project that
-            originally started out with a simple p5.js sketch. You were able to edit and save levels to send to other
-            people, but it didn't feel like enough. I wanted to make a more universal network, so I decided to start
-            working on a more professional game layout/system. <a href="http://platformergame.us">The game</a> became
-            more popular among my friends, and it began to outgrow the platform I was making it on: <a
-                href="https://www.construct.net/en/construct-2/download">Construct 2</a>. It was also becoming
-            discontinued, so I wanted to move away from deprecated software and migrate to something like <a
-                href="https://unity.com/">Unity</a> or just vanilla JS. I <i>did</i> have a Unity project for a while,
-            but it didn't seem like the right way to make it as the physics system gave me incorrect behavior when
-            compared to the original C2 version. Then I decided to move to vanilla JS. It was the most successful
-            version, with a planned chat room and whole account system, but I lost motivation after trying to go back to
-            edit the code for the editor. It was super spaghetti, and it was also the main part of the website. I
-            decided that I should start over with more planning involved; I was going to make a <a
-                href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">UML diagram.</a> That's where I am right
-            now, creating the next generation of OnlinePlatformer. I do not have a planned release date, but I will
-            update the website when I finish it, or, at least, the first version of it. </div>
-        <div class="separator"></div>
+    </div>
+
+    <nav>
+        <a class="navlink" href="#home">Home</a>
+        <a class="navlink" href="#gallery">Blender Gallery</a>
+        <a class="navlink" href="#projects">Projects</a>
+    </nav>
+
+    <div class="page" data-name="home">
+        <section>
+            <p style="font-size: 2rem; margin-bottom: 0; font-style: italic;">Hello! :3</p>
+            <p style="font-size: 4rem; margin-top: 1rem;"><nobr>I'm arlojay</nobr> <wbr/> <nobr>(or Lecks)</nobr></p>
+        </section>
+
+        <section style="backdrop-filter: hue-rotate(94deg); font-size: max(2rem, 4vw);">
+            <div style="display: grid;">
+                <img src="./assets/background1.jpg" style="grid-area: 1/1/2/2; width: 100%; mask-image: linear-gradient(to bottom, #ffff 50%, #0000); filter: blur(0.1vw)">
+                <div style="grid-area: 1/1/2/2; z-index: 1;">
+                    <ul class="nobullets" style="width: 100%; text-align: right;">
+                        <li>3D Artist &circlearrowright; 🧊</li>
+                        <li>Programmer; 💻</li>
+                        <li>Game Developer &star; 🎮</li>
+                        <li>Music Producer &NotSquareSubsetEqual; 🥭</li>
+                    </ul>
+                </div>
+                <div style="height: 8vw;"></div>
+                <p style="font-style: italic; font-size: 0.75em;">Visit the pages at the top to learn more!</p>
+            </div>
+        </section>
+
+        <section>
+            <h1 style="font-size: 3rem;">Contact</h1>
+            <div style="text-align: left; margin-left: 10%;">
+                <p>
+                    <span>The only public platform that I use is Discord.</span><br>
+                    <span style="margin-left: 2em;">You can add me as a friend with <a href="https://discord.com/users/584326261258846208" class="external-link" target="_blank">@arlojay</a>!</span>
+                </p>
+                <p>
+                    <span>If you cannot message me this way, you can try using my public email! <a href="javascript:copyText('lecks@arlojay.com')" class="external-link">lecks@arlojay.com</a> </span>
+                </p>
+            </div>
+        </section>
+
+        <div style="height: 8rem;"></div>
+    </div>
+    <div class="page" data-name="404">
+        <section style="display: flex; justify-content: center; padding: 5%; padding-top: 8rem;">
+            <div style="display: grid; align-items: center; width: max-content;">
+                <div style="margin-right: 10%;">
+                    <p style="font-size: 4rem; margin-bottom: 0; font-style: italic;">That page doesn't exist</p>
+                    <p style="font-size: 2rem; margin: 0; opacity: 0.5;">(yet!)</p>
+                    <p style="font-size: 2rem; margin-bottom: 0;">Try again with a different URL or <a class="navlink" href="#home">Go Home</a> </p>
+                    <div style="height: 16rem;"></div>
+                </div>
+                <div>
+                    <img src="./assets/404.gif">
+                </div>
+            </div>
+        </section>
     </div>
 </body>
-
 </html>
