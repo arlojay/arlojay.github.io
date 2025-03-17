@@ -27,14 +27,14 @@
         </section>
 
         <section style="backdrop-filter: hue-rotate(94deg); font-size: max(2rem, 4vw);">
-            <div style="display: grid;">
-                <img src="./assets/background1.jpg" style="grid-area: 1/1/2/2; width: 100%; mask-image: linear-gradient(to bottom, #ffff 50%, #0000); filter: blur(0.1vw)">
-                <div style="grid-area: 1/1/2/2; z-index: 1;">
+            <div class="with-background">
+                <img src="./assets/background1.jpg" class="background" style="mask-image: linear-gradient(to bottom, #ffff 50%, #0000); filter: blur(0.1vw)">
+                <div class="content">
                     <ul class="nobullets" style="width: 100%; text-align: right;">
-                        <li>3D Artist &circlearrowright; 🧊</li>
-                        <li>Programmer; 💻</li>
-                        <li>Game Developer &star; 🎮</li>
-                        <li>Music Producer &NotSquareSubsetEqual; 🥭</li>
+                        <li><a class="navlink rightline" href="#gallery">3D Artist &circlearrowright; 🧊</a></li>
+                        <li><a class="rightline" href="https://github.com/arlojay">Programmer; 💻</a></li>
+                        <li><a class="navlink rightline" href="#projects">Game Developer &star; 🎮</a></li>
+                        <li><a class="rightline" href="https://arlojay.bandcamp.com">Music Producer &NotSquareSubsetEqual; 🥭</a></li>
                     </ul>
                 </div>
                 <div style="height: 8vw;"></div>
@@ -71,6 +71,61 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div class="page" data-name="projects">
+        <section style="padding: 0 2rem; display: flex; flex-direction: column; align-items: center;">
+            <h1>My projects</h1>
+            <p style="text-align: left; max-width: 60rem;">This is a collection of some of the projects I've worked on in the past. Hopefully they still work, unlike my previous projects hosted on <a class="external-link" href="https://replit.com/@arlojay">Replit</a> which have been lost to the void of <i>pseudocurrency</i> and their everlasting desire to become their own (self-centered) platform.</p>
+            <p style="text-align: left; max-width: 60rem;">Like many other people, I start and stop projects, many of which get abandoned. I'm getting better about that now. My philosophy is that <b>side projects hone your skills</b>. You may feel like you get nothing out of working on a project if it doesn't get complete, but you learn many new skills that you'll master through consecutive projects. For example, if you figure out through trial and error that shared buffers aren't synchronous across threads, you'll design your next project with that in mind.</p>
+        </section>
+        <article class="with-background" style="background: #000">
+            <img src="./assets/crdag.jpg" class="background" style="filter: blur(0.3vw);">
+            <div class="content" style="padding: 0 2rem; display: flex; flex-direction: column; align-items: center;">
+                <h1>Cosmic Reach Dynamic Asset Generator</h1>
+                <p>Cosmic Reach Dynamic Asset Generator is a library written in TypeScript that allows for easy creation of <a class="external-link" href="https://finalforeach.itch.io/cosmic-reach">Cosmic Reach</a> mods.</p>
+                <div style="text-align: left; max-width: 60rem;">
+                    <p>I made this project to accompany development of Immersive Cables, another project I made.</p>
+                    <p>The previous version of this project (released at <a href="https://github.com/arlojay/cosmic-reach-modding-api/">arlojay/cosmic-reach-modding-api</a>) worked for old versions of Cosmic Reach, but was limited in its application to future versions. It had little expandability, and was designed for use only by me. So I made this, CRDAG.</p>
+                    <p>If you're a Cosmic Reach player, feel free to use this tool to make your own mods!</p>
+                </div>
+            </div>
+        </article>
+        <article class="with-background" style="background: #032221;">
+            <img src="./assets/immersive-cables-background.gif" class="background" style="filter: blur(0.3vw); mask-image: linear-gradient(to bottom, #ffff 50%, #fff0);">
+            <div class="content" style="padding: 0 2rem; display: flex; flex-direction: column; align-items: center;">
+                <h1>Immersive Cables</h1>
+                <p>Immersive Cables is a mod for <a class="external-link" href="https://finalforeach.itch.io/cosmic-reach">Cosmic Reach</a> that adds cables, logic gates, and utility blocks.</p>
+                <div style="text-align: left; max-width: 60rem;">
+                    <div style="display: grid; grid-template-columns: 2fr 1fr;">
+                        <div>
+                            <p>Technically, this mod is a second edition of a previous Immersive Cables. The first was created as a demo mod for what was possible with <dfn title="A term used in the Cosmic Reach community for modifying the game by creating json defintions for blocks/entities/etc.">data-modding</dfn>. It was done with an additionally first-edition version of <a href="https://github.com/arlojay/cosmic-reach-dynamic-asset-generator" target="_blank"><abbr title="Cosmic Reach Dynamic Asset Generator">CRDAG</abbr></a>, then called <abbr title="Cosmic Reach Modding API">CRMAPI</abbr>. I remade both projects for modern versions of Cosmic Reach because the old versions were growing to be unmanageable and outdated.</p>
+                        </div>
+                        <aside style="display: flex; align-items: center; margin-left: 2rem;">
+                            <img src="./assets/immersive-cables-small.jpg" width="100%">
+                        </aside>
+                    </div>
+
+                    <p>You can find the wiki at <a class="external-link" href="https://github.com/arlojay/immersive-cables-wiki/wiki/">arlojay/immersive-cables-wiki</a>!</p>
+                    
+                    <p>The mod is currently closed-source, but I have plans to eventually make it public. I'm not sure when.</p>
+                </div>
+            </div>
+        </article>
+        <article class="with-background" style="background: #00548D">
+            <img src="./assets/melvinland.gif" class="background" style="image-rendering: pixelated; filter: blur(0.3vw); align-self: flex-end;">
+            <div class="content" style="padding: 0 2rem; display: flex; flex-direction: column; align-items: center;">
+                <h1>Melvinland</h1>
+                <p>Melvinland is a fan project based on <a class="external-link" href="https://bsky.app/profile/sirninjamonkey.bsky.social">@sirninjamonkey.bsky.social</a>'s Melvin, which was created as a suggestion for <a class="external-link" href="https://finalforeach.itch.io/cosmic-reach">Cosmic Reach</a>.</p>
+                <div style="text-align: left; max-width: 60rem;">
+                    <p>Melvinland is a game made in <a class="external-link" href="https://construct.net">Construct 3</a> based on a single image. I saw that Ninja created an image of Melvin in a game-like appearance, so I thought it would be interesting to actually turn it into a game.</p>
+                    <p>I don't mean for the game to become its entire own thing; I mostly made it as a mediocre spin-off. Maybe, at some point in the future, if I feel like expanding upon it and/or turning it into a fully-fledged game, I will.</p>
+                    <p>You can play the current game at <a class="external-link" href="https://arlojay.com/melvinland">arlojay.com/melvinland</a>!</p>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="page" data-name="about-me">
+        
     </div>
 </body>
 </html>

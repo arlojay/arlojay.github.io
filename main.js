@@ -8,7 +8,6 @@ function copyText(text) {
 }
 
 window.addEventListener("load", () => {
-    console.log("loaded");
     const copiedPopup = document.querySelector("#copied-popup");
 
     copiedPopup.addEventListener("mouseover", () => {
@@ -35,21 +34,27 @@ window.addEventListener("load", () => {
 
     document.querySelectorAll(".navlink").forEach(element => {
         element.addEventListener("click", e => {
-            window.history.replaceState(null, null, element.href);
-            showPage(element.getAttribute("href").slice(1));
+            window.history.pushState(element.href, null, element.href);
+            updatePage();
         })
     });
 
-    const currentPage = document.location.hash.slice(1);
+    window.addEventListener("popstate", () => {
+        updatePage();
+    })
 
-    console.log(currentPage);
+    updatePage();
+});
+
+function updatePage() {
+    const currentPage = document.location.hash.slice(1);
 
     if(currentPage == "") {
         showPage("home");
     } else {
         showPage(currentPage);
     }
-});
+}
 
 function showPage(pageName) {
     let foundPage = false;
@@ -58,7 +63,6 @@ function showPage(pageName) {
         if(pageElement.dataset.name == pageName) {
             pageElement.hidden = false;
             foundPage = true;
-            console.log("found page " + pageName);
         } else {
             pageElement.hidden = true;
         }

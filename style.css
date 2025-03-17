@@ -61,9 +61,6 @@ a {
         position: relative;
         left: 50%;
 
-        --start: 0;
-        --end: 1;
-
         background: #fff;
         transition: width 0.2s ease-out, left 0.2s ease-out;
     }
@@ -77,10 +74,23 @@ a {
         width: 100%;
         left: 0%;
     }
+
+    &.rightline {
+        &::after {
+            left: 100%;
+        }
+    
+        &:hover::after {
+            left: 0%;
+            width: 100%;
+        }
+    }
 }
 
-section:not(:last-child) {
-    border-bottom: var(--line-thickness) solid currentColor;
+section, article {
+    &:not(:last-child) {
+        border-bottom: var(--line-thickness) solid currentColor;
+    }
 }
 
 ul.nobullets {
@@ -162,6 +172,48 @@ ul.nobullets {
         grid-template-rows: minmax(auto, 48rem) minmax(auto, 24rem);
         img {
             display: none;
+        }
+    }
+}
+
+.cardview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .card {
+        width: 16rem;
+        height: 12rem;
+        border: var(--line-thickness) solid #fff;
+    }
+}
+
+.with-background {
+    display: grid;
+    & > .background {
+        grid-area: 1/1/2/2;
+        width: 100%;
+    }
+    & > .content {
+        grid-area: 1/1/2/2;
+        z-index: 1;
+    }
+}
+
+dfn, abbr {
+    &:hover {
+        cursor: help;
+    }
+}
+
+dfn {
+    text-decoration: underline dotted;
+}
+
+[data-name="projects"] {
+    article {
+        .content {
+            margin: 4rem 0;
         }
     }
 }
