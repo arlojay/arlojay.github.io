@@ -45,7 +45,7 @@ nav {
     }
 }
 
-a {
+a:not(.nostyle) {
     color: white;
     text-decoration: none;
     display: inline-grid;
